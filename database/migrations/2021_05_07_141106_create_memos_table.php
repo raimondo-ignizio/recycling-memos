@@ -14,7 +14,8 @@ class CreateMemosTable extends Migration
     public function up()
     {
         Schema::create('memos', function (Blueprint $table) {
-          $table->string("day");
+          $table->increments("id")->start_from(1);
+          $table->date("day");
           $table->time("hour_start");
           $table->time("hour_end");
           $table->string("type");

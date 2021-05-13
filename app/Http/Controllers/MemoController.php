@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Memo;
+use Carbon\Carbon;
 
 
 class MemoController extends Controller
@@ -12,7 +13,7 @@ class MemoController extends Controller
   public function read()
   {
     return view("memos", [
-      "memos" => DB::table("memos")->get()
+      "memos" => Memo::orderBy("day", "asc")->get()
     ]);
   }
 
@@ -43,7 +44,44 @@ class MemoController extends Controller
     ]);
 
     return view("memos", [
-      "memos" => DB::table("memos")->get()
+      "memos" => Memo::orderBy("day", "asc")->get()
+    ]);
+  }
+
+  public function delete(request $request)
+  {
+    $id = $request->input("id");
+
+
+
+    return view("delete", [
+      "delete" => DB::table("memos")->where("id", "=", $id)->delete()
+    ]);
+  }
+
+  public function deleteAll()
+  {
+    return view("delete", [
+      "delete" => Memo::truncate()
+    ]);
+  }
+
+  public function showToday()
+  {
+    $currentDate = date("Y-m-d");
+
+    return view("memos", [
+      "memos" => Memo::where("day", "=", $currentDate)->get()
+    ]);
+  }
+
+  public function showWeek()
+  {
+    return view("memos", [
+      "memos" => Memo::where("day", ">=", Carbon::now()->startOfWeek())
+                 ->where("day", "<=", Carbon::now()->endOfWeek())
+                 ->orderBy("day", "asc")
+                 ->get()
     ]);
   }
 }

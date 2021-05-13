@@ -23,5 +23,11 @@ Route::get("form", function() {
 });
 
 Route::get("memo", [MemoController::class, "read"]);
-
 Route::post("memo", [MemoController::class, "create"]);
+
+Route::get("delete-all", [MemoController::class, "deleteAll"]);
+
+Route::post("delete", [MemoController::class, "delete"]);
+
+Route::get("today", [MemoController::class, "showToday"]);
+Route::get("week", [MemoController::class, "showWeek"]);

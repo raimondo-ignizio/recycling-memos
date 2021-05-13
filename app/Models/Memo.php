@@ -25,6 +25,7 @@ class Memo extends Model
     ];
 
     protected $casts = [
+      "day" => "date:l d/m/Y",
       "created_at" => "datetime",
       "updated_at" => "datetime"
     ];

@@ -1,15 +1,5 @@
 <?php
 
-$days = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday"
-];
-
 $recyclingTypes = [
   "Paper",
   "Plastic",
@@ -36,12 +26,7 @@ $recyclingTypes = [
     <div id="form-1">
       <form method="post" action="memo">
         <label for="day">Day:</label>
-        <select name="day" required>
-          <option style="display: none"></option>
-          <?php foreach ($days as $day) {
-            echo "<option value='{$day}'>{$day}</option>";
-          }; ?>
-        </select>
+        <input type="date" name="day" required></input>
 
         <label for="time-start">From:</label>
         <input type="time" name="time-start" required></input>
@@ -60,15 +45,9 @@ $recyclingTypes = [
 
     <br/>
 
-    <div id="form-2" hidden>
+    <div id="form-2" style="display: none">
       <label for="day-2" style="visibility: hidden">Day:</label>
-      <select name="day-2" style="visibility: hidden">
-        <option style="display: none"></option>
-        <?php foreach ($days as $day) {
-          echo "<option value='{$day}'>{$day}</option>";
-        }; ?>
-      </select>
-
+      <input type="date" name="day-2" style="visibility: hidden"></input>
       <label for="time-start-2">From:</label>
       <input type="time" name="time-start-2"></input>
 
@@ -86,14 +65,9 @@ $recyclingTypes = [
 
     <br/>
 
-    <div id="form-3" hidden>
+    <div id="form-3" style="display: none">
       <label for="day-3" style="visibility: hidden">Day:</label>
-      <select name="day-3" style="visibility: hidden">
-        <option style="display: none"></option>
-        <?php foreach ($days as $day) {
-          echo "<option value='{$day}'>{$day}</option>";
-        }; ?>
-      </select>
+      <input type="date" name="day-3" style="visibility: hidden"></input>
 
       <label for="time-start-3">From:</label>
       <input type="time" name="time-start-3"></input>
@@ -112,9 +86,12 @@ $recyclingTypes = [
 
       <button type="submit">Submit</button>
 
-      <button type="button">+</button>
+      <button id="add-button" type="button">+</button>
+      <button id="remove-button" type="button" style="display: none">-</button>
     </form>
+
+    <a href="memo"><button type="button">View memos</button></a>
   </div>
-  <script type="text/javascript" src="./resources/js/app.js"></script>
+  <script src="/app.js"></script>
 </body>
 </html>
