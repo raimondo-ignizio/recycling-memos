@@ -15,7 +15,7 @@ use App\Http\Controllers\MemoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get("form", function() {

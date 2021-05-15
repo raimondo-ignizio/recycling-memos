@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F4FCEB;
+  padding: 0 10px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+.center-column h2 {
+font-size: 40px;
+}
+
+
+p {
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+
+#logo {
+  width: 175px;
+  height: 175px;
+  margin-top: 50px;
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#delete-button {
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+}
+
+#left-link, #right-link {
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 150px;
+}
+
+button {
+  margin-top: 50px;
+  height: 38px;
+  width: 75px;
+  font-size: 15px;
+  background-color: #B4F26D;
+  border-radius: 3px;
+}
+
+.memo-table button {
+    padding: 0 10px;
+}
+
+table {
+  font-size: 14px;
+  margin: 10px auto;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+}
+
+td {
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .form-container div {
+    display: inline;
+  }
+
+  table {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #A9FDAC;
+  }
+
+  body div {
+    background-color: #F4FCEB;
+  }
+
+  h1 {
+    font-size: 63px;
+  }
+
+  h2 {
+    font-size: 47px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  table {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .center-column {
+    height: 935px;
+    width: 1200px;
+  }
+
+  .center-column h1 {
+    margin-left: 30px;
+    margin-top: 85px;
+  }
+
+  #homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .center-column div {
+    order: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #left-link {
+    display: block;
+    width: 300px;
+    order: -1;
+    background-color: #A9FDAC;
+  }
+
+  #right-link {
+    display: block;
+    width: 300px;
+    order: 1;
+    background-color: #A9FDAC;
+  }
+
+  .form-container div {
+    display: inline;
+  }
+}
