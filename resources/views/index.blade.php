@@ -15,7 +15,7 @@
 
     <div>
       <p>Welcome to Recycling Memos, an application that lets you take notes
-         about your recycling collection's days.</p>
+         about your recycling collections' days.</p>
     </div>
   </div>
 

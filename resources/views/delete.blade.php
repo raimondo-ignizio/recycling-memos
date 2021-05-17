@@ -6,7 +6,7 @@
   <title>Delete completed</title>
   <link rel="stylesheet" href='/css/app.css'/>
 </head>
-<body>
+<body id="deletion-page">
   <h2>Element(s) deleted successfully</h2>
   <a href="memo"><button type="button">Go back</button></a>
 </body>

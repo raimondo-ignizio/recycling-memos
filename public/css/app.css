@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("woff2 supports variations"),
+       url("/fonts/Quicksand-VariableFont_wght.ttf") format("woff2-variations");
+  font-weight: 300 700;
+  font-stretch: 25% 151%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 body {
@@ -77,8 +86,16 @@ table {
   border-color: black;
 }
 
+th {
+  border-style: none none solid none;
+}
+
 td {
   text-align: center;
+}
+
+.tips {
+  color: #636564;
 }
 
 @media only screen and (min-width: 600px) {
@@ -122,7 +139,6 @@ td {
   }
 
   .center-column {
-    height: 935px;
     width: 1200px;
   }
 
@@ -135,6 +151,7 @@ td {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 935px;
   }
 
   .center-column div {
@@ -159,5 +176,9 @@ td {
 
   .form-container div {
     display: inline;
+  }
+
+  #deletion-page {
+    display: block;
   }
 }

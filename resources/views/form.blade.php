@@ -115,6 +115,8 @@ $recyclingTypes = [
       <button id="add-button" type="button">Add more</button>
       <button id="remove-button" type="button" style="display: none">Undo</button>
     </form>
+
+    <p class="tips">More collections in one day? Click "Add more"!</p>
   </div>
 
   <div id="left-link">
