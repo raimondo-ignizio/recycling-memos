@@ -13,7 +13,7 @@ class MemoController extends Controller
   public function read()
   {
     return view("memos", [
-      "memos" => Memo::orderBy("day", "asc")->get()
+      "memos" => Memo::orderBy("day", "asc")->paginate(6)
     ]);
   }
 
@@ -44,7 +44,7 @@ class MemoController extends Controller
     ]);
 
     return view("memos", [
-      "memos" => Memo::orderBy("day", "asc")->get()
+      "memos" => Memo::orderBy("day", "asc")->paginate(6)
     ]);
   }
 
@@ -71,7 +71,7 @@ class MemoController extends Controller
     $currentDate = date("Y-m-d");
 
     return view("memos", [
-      "memos" => Memo::where("day", "=", $currentDate)->get()
+      "memos" => Memo::where("day", "=", $currentDate)->paginate(6)
     ]);
   }
 
@@ -81,7 +81,7 @@ class MemoController extends Controller
       "memos" => Memo::where("day", ">=", Carbon::now()->startOfWeek())
                  ->where("day", "<=", Carbon::now()->endOfWeek())
                  ->orderBy("day", "asc")
-                 ->get()
+                 ->paginate(6)
     ]);
   }
 }

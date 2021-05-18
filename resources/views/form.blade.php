@@ -22,7 +22,7 @@ $recyclingTypes = [
   <link rel="stylesheet" href='/css/app.css'/>
 </head>
 <body>
-  <div class="center-column">
+  <div class="center-column" id="form-container">
     <h2>Add Memo</h2>
     <div id="form-1">
       <form id="memo-form" class="form-container" method="post" action="memo">

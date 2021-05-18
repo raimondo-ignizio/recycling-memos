@@ -92,6 +92,7 @@ th {
 
 td {
   text-align: center;
+  padding: 5px 0;
 }
 
 .tips {
@@ -140,6 +141,7 @@ td {
 
   .center-column {
     width: 1200px;
+    height: 935px;
   }
 
   .center-column h1 {
@@ -151,6 +153,10 @@ td {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 935px;
+  }
+
+  #form-container {
     height: 935px;
   }
 
@@ -180,5 +186,9 @@ td {
 
   #deletion-page {
     display: block;
+  }
+
+  .memo-table nav {
+    font-size: 30px;
   }
 }

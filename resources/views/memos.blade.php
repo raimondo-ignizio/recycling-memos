@@ -54,9 +54,12 @@
       ?>
     </table>
 
+    <nav>
+      {{ $memos->links("pagination::simple-tailwind") }}
+    </nav>
+
     <a href="delete-all"><button type="button"
     onclick="return confirm(`Are you sure? This action is irreversible!`);">Clean memos</button></a>
-    <a href="form"><button type="button">Add memo</button></a>
     <a href="memo"><button type="button">All memos</button></a>
     <a href="today"><button type="button">Today's memos</button></a>
     <a href="week"><button type="button">Week's memos</button></a>
