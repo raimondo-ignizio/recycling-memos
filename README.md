@@ -4,7 +4,7 @@ A PHP and MySQL project on Start2Impact
 
 # Description
 
-This PHP application let's you take track of recycling collections by creating and storing memos in a database. 
+This PHP application lets you take track of recycling collections by creating and storing memos in a database. 
 
 # Usage
 
